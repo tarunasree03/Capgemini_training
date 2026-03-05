@@ -1,0 +1,53 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version= "3.0">
+    <persistence-unit name="taskPU">
+        <provider> org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class> org.example.Task</class>
+        <class>org.example.User</class>
+        <properties>
+            <!-- Database -->
+           <property name="jakarta.persistence.jdbc.url"
+                     value="jdbc:mysql://localhost:3306/jpa_demo"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="root"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+
+            <!-- Hibernate -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
+
+<!-- persistence.xml > Unit > EntityManagerFactory > EntityManager  > Database -->
+
+<!-- update / create / validate / none -->
+
+<!-- Manager Factory -->
+<!-- 1. read persistence.xml -->
+<!-- Load provider -->
+<!-- Connect to db -->
+<!-- register entities -->
+<!-- prepare meta data -->
+<!-- create persistence context factory -->
+
+<!-- Entity: Student
+Table: Student
+id - bigint - primary Key - autoincrement
+ name - varchar - not null
+ age - integer -->
+
+<!--Create Persistence Context Factory
+Student s = em.find(Student.class, 1L);  // em = Entity Manager
+-->
+
+<!-- Entity Manager Interface
+java code > Entity Manager > Hibernate > Database -->
+
+<!-- Entity Manager Methods
+persist / remove / find / merge / create query -->
+<!-- flush / clear / detach / close -->
+
+<!-- Container vs Application Managed Entity Manager -->
+
